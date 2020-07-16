@@ -1,7 +1,7 @@
 Install:
 1. Create database
 2. Make migrations ``php yii migrate``
-3. Fill date ``php yii daily-handler/generate``
+3. Fill data ``php yii daily-handler/generate``
 4. Create CRON task ``php yii daily-handler``
 5. Visit homepage
 -----------------

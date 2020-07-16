@@ -127,7 +127,8 @@ class Operation extends \yii\db\ActiveRecord
             SELECT 
                 LEFT(created_at, 7) as yearmonth,
                 SUM(CASE WHEN direction = " . self::DIRECTION_ACCRUAL . " THEN cash END) as accrualsum,
-                SUM(CASE WHEN direction = " . self::DIRECTION_COMMISSION . " THEN cash END) as commissionsum
+                SUM(CASE WHEN direction = " . self::DIRECTION_COMMISSION . " THEN cash END) as commissionsum,
+                SUM(CASE WHEN direction = " . self::DIRECTION_COMMISSION . " THEN cash ELSE -cash END) as diff
             FROM 
                 " . self::tableName() . " 
             GROUP BY LEFT(created_at, 7)

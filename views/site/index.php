@@ -12,6 +12,7 @@ $this->title = 'TS Tech';
                 <th>Year-month</th>
                 <th>Accrual sum</th>
                 <th>Commission sum</th>
+                <th>Diff sum</th>
             </tr>
             <?php foreach ($report['profitByMonths'] as $rows) { ?>
                 <tr>
